@@ -42,53 +42,51 @@ a:hover {
   padding: 0;
   display: flex;
   align-content: center;
-  flex: 3;
   flex-grow: 3;
+  /*flex: 3;*/
+  /*
+  here i have taken out the flexbox flex: 3; because it seems that i dont need this anymore as flex-grow is the same as flex. i have chosen flex-grow to stay because it is easier to understand as the items are growing inside the container. flex-grow is one of felx's properties.*/
 }
-
 li {
   width: 100%;
   align-content: flex-start;
-  
 }
-
 .social {
-  flex: 1; 
+  flex: 1;
 }
-
 
 @media all and (max-width:1000px)/*middle*/{
-  .flex-nav ul {
+  
+  /*.flex-nav ul {
     display: flex;
     align-content: center;
     flex: 3;
     flex-wrap: wrap;
     flex-grow: 1;
-    
-  }
+  }*/
+/*
+here i have commented out the code of flex-nav ul because it is inheriting the information from the parent flex-nav ul as per above, this  media querey is only used to write changes in the code.*/
 
   li {
-     
     width: 50%;
-    align-content: flex-start;
+    /*align-content: flex-start;*/
+    /*
+    align-content is commented out because it is written in the main class li above the media queries.*/
   }
-
-  .social {
+  /*.social {
     flex: 1; 
-  }
+  }*/
+  /*
+  this class .social isnt needed because it also inherits information from its parent class and items are not changing with .social.*/
 } 
 
 @media all and (max-width:500px) /*small*/ {
- 
-
-  li { width: 100%;
+  li { 
+    width: 100%;
     flex-direction: column;
-    
   }
-
   .social {
     width:25%;
-    
   }
 }
 
